@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Simple Calculator</title>
     <style>
-        body{
+        body {
             background-color: gray;
         }
-        input[type="text"]{
-            background-color: aqua;
+
+        input[type="text"] {
+            background-color: white;
             color: black;
             width: 150px;
             height: 30px;
-            border: 1px solid blue;
+            border: none;
             position: relative;
             top: 30px;
             margin-left: 130px;
@@ -23,8 +25,10 @@
             font-weight: bold;
             font-size: 12px;
             border-radius: 5px;
+            outline: none;
         }
-        input[type="button"]{
+
+        input[type="button"] {
             width: 140px;
             height: 30px;
             background-color: black;
@@ -41,14 +45,16 @@
             text-transform: uppercase;
             border-radius: 5px;
         }
-        input[type="button"]:active{
+
+        input[type="button"]:active {
             transition: 0.5 ease;
             transform: scale3d(1.2);
             background-color: cadetblue;
             border: 1px solid brown;
             box-shadow: 0 0 3px black;
         }
-        .calc{
+
+        .calc {
             background-color: aliceblue;
             width: 700px;
             height: 500px;
@@ -57,71 +63,132 @@
             left: 300px;
             border: 1px solid black;
             border-radius: 10px;
-            box-shadow: 0 0 10px black inset;
-            
+            box-shadow: 0 0 10px black;
+
         }
-        h1{
+
+        h1 {
             text-align: center;
-            font-family: sans-serif;
+            font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
             text-transform: uppercase;
             font-size: 20px;
-            text-shadow: 0 0 3px gray;
+
+        }
+
+        input[type="text1"] {
+            width: 300px;
+            height: 30px;
+            position: relative;
+            top: 30px;
+            left: 130px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: black;
+            text-align: center;
+
+        }
+
+        h3 {
+            position: relative;
+            top: 75px;
+            left: 40px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        input[type="reset"] {
+            width: 400px;
+            height: 40px;
+            text-align: center;
+            color: white;
+            background-color: rgb(24, 145, 135);
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 15px;
+            text-transform: uppercase;
+            position: relative;
+            top: 150px;
+            left: 135px;
+            border: 1px solid white;
+            box-shadow: 0 0 3px rgb(0, 0, 0);
+            outline: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="reset"]:active {
+            transition: 0.5;
+            transform: scale(.9);
+            background-color: red;
+            color: black;
         }
     </style>
     <script src="jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
-            $("#btnAdd").on('click', function () {
+            $("#btnAdd").click(function () {
                 Add();
             });
-            $("#btnSubstract").on('click', function () {
+            $("#btnSubstract").click(function () {
                 Substract();
-            })
-            $("#btnMultiply").on('click', function () {
+            });
+            $("#btnMultiply").click(function () {
                 Multiply();
-            })
-            $("#btnDivide").on('click', function () {
+            });
+            $("#btnDivide").click(function () {
                 Divide();
-            })
+            });
         });
         function Add() {
             var no1 = parseInt($("#txtNo1").val());
             var no2 = parseInt($("#txtNo2").val());
             var result = no1 + no2;
-            alert("The result is " + result);
+            document.f1.op.value = result;
         }
         function Substract() {
             var no1 = parseInt($("#txtNo1").val());
             var no2 = parseInt($("#txtNo2").val());
             var result = no1 - no2;
-            alert("The result is " + result);
+            document.f1.op.value = result;
         }
         function Multiply() {
             var no1 = parseInt($("#txtNo1").val());
             var no2 = parseInt($("#txtNo2").val());
             var result = no1 * no2;
-            alert("The result is " + result);
+            document.f1.op.value = result;
         }
         function Divide() {
             var no1 = parseInt($("#txtNo1").val());
             var no2 = parseInt($("#txtNo2").val());
             var result = no1 / no2;
-            alert("The result is " + result);
+            document.f1.op.value = result;
         }    
     </script>
-    
+
 </head>
+
 <body>
-    <div class="calc">
-        <h1>A Simple Calculator</h1>
-    <input type="text" id="txtNo1" placeholder="Enter first number">
-    <input type="text" id="txtNo2" placeholder="Enter second number"><br>
-    <input type="button" id="btnAdd" value="Add">
-    <input type="button" id="btnSubstract" value="Substract"><br>
-    <input type="button" id="btnMultiply" value="Multiply">
-    <input type="button" id="btnDivide" value="Divide">
-    </div>
-    
+    <form name="f1">
+        <div class="calc">
+            <h1>A Simple Calculator</h1>
+            <input type="text" id="txtNo1" placeholder="Enter first number" autocomplete="off" >
+            <input type="text" id="txtNo2" placeholder="Enter second number" autocomplete="off"><br>
+            <h3>Result: </h3><input type="text1" name="op" id="" readonly><br>
+            <input type="button" id="btnAdd" value="Add">
+            <input type="button" id="btnSubstract" value="Substract"><br>
+            <input type="button" id="btnMultiply" value="Multiply">
+            <input type="button" id="btnDivide" value="Divide"><br>
+            <input type="reset" value="Reset" name="Reset">
+        </div>
+    </form>
+
 </body>
+
 </html>

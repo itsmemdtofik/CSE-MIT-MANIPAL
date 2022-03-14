@@ -7,15 +7,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drop Down List</title>
     <script src="jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            background-color: white;
+        }
+
+        .drop-down-main {
+            width: 600px;
+            height: 500px;
+            background-color: whitesmoke;
+            position: absolute;
+            top: 40px;
+            left: 350px;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .drop-down-main h1 {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 30px;
+            text-align: center;
+            text-transform: uppercase;
+            text-shadow: 0 0 3px brown;
+        }
+
+        .drop-down-main select {
+            width: 300px;
+            height: 30px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 15px;
+            outline-color: rgb(165, 42, 155);
+            position: relative;
+            left: 150px;
+            cursor: pointer;
+            background-color: rgb(165, 42, 155);
+            color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            
+        }
+
+        .drop-down-checkbox {
+            width: 320px;
+            height: 30px;
+            position: relative;
+            top: 30px;
+            left: 150px;
+            display: inline-block;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 15px;
+
+        }
+
+        .drop-down-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+        }
+
+        .drop-down-checkbox h3 {
+            font-size: 20px;
+            position: relative;
+            top: -45px;
+            left: 30px;
+        }
+
+        .drop-down-checkbox-two {
+            width: 150px;
+            height: 30px;
+            position: relative;
+            top: -25px;
+            left: 150px;
+        }
+
+        .drop-down-checkbox-two input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .drop-down-checkbox-two h4 {
+            font-size: 20px;
+            position: relative;
+            top: -50px;
+            left: 30px;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            height: 30px;
+            text-align: center;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            position: relative;
+            top: -100px;
+            left: 150px;
+            border: none;
+            outline:none;
+        }
+         input[type="text"]:hover{
+            box-shadow: 0 0 3px black;
+            border: 1px solid blue;
+            border-radius: 5px;
+            transition: 0.5s;
+         }
+        h5{
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            position: relative;
+            top: -40px;
+            left: 10px;
+        }
+       input[type="button"]{
+            width: 300px;
+            height: 40px;
+            text-align: center;
+            color: white;
+            background-color: blue;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 15px;
+            text-transform: uppercase;
+            position: relative;
+            top: -30px;
+            left: 150px;
+            border: 1px solid white;
+            box-shadow: 0 0 3px rgb(0, 0, 0);
+            outline: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="button"]:active {
+            transition: 0.5;
+            background-color: green;
+            color: white;
+            transform: scale(1);
+        }
+        input[type="reset"]{
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            color: white;
+            background-color: black;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 15px;
+            text-transform: uppercase;
+            position: relative;
+            top: -30px;
+            left: 150px;
+            border: 1px solid white;
+            box-shadow: 0 0 3px rgb(0, 0, 0);
+            outline: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }input[type="reset"]:active {
+            transition: 0.5;
+            transform: scale(.9);
+            background-color: red;
+        }
+        #result{
+            width: 300px;
+            height: 30px;
+            text-align: center;
+            color: black;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            position: relative;
+            top: -50px;
+            left: 150px;
+            outline: none;
+            border: none;
+            
+        }
+        h2{
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            font-size: 20px;
+            text-transform: uppercase;
+            position: relative;
+            left: 10px;
+            top: -5px;
+        }
+    </style>
 </head>
 
 <body>
-    <form>
+    <form name = "f1">
         <div class="drop-down-main">
             <h1>shopping</h1>
             <select name="dropdown">
-                <option value="" name="">SELECT</option>
-                <option value="HP" selected>HP</option>
+                <option value="">SELECT</option>
+                <option value="HP">HP</option>
                 <option value="Nokia">Nokia</option>
                 <option value="Samsung">Samsung</option>
                 <option value="Motorola">Motorola</option>
@@ -26,75 +221,87 @@
                 <h3>Mobile</h3><br>
             </div>
             <div class="drop-down-checkbox-two">
-                <input type="checkbox" name="check1" id="checkbox1" value="Laptop">
+                <input type="checkbox" name="check1" id="checkbox2" value="Laptop">
                 <h4>Laptop</h4><br>
             </div>
-            <input type="text" name="quantity" id="quantity" placeholder="Enter Quantity" autocomplete="off">
-            <button>Produce Bill</button>
+            <h2>TOTAL(RS): </h2><input type="text1" name="result" id="result" autocomplete="off" readonly><br>
+            <h5>Quantity : </h5><input type="text" name="quantity" id="quantity" autocomplete="off" required>
+            <input type="button" value="Produce Bill" id="button">
+            <input type="reset" value="Reset" name="reset">
 
 
         </div>
     </form>
     <script>
         $(document).ready(function () {
-            $("button").click(function () {
-                var sum = 0;
+            $("#button").click(function () {
+                var myAmount = 0;
+               
                 if ($("select").val() == "HP") {
                     if ($("#checkbox1").prop("checked") == true && $("#checkbox2").prop("checked") == true) {
-                        sum = sum + parseInt($("#quantity").val()) * 25000;
-                        sum = sum + parseInt($("#quantity").val()) * 30000;
-                    }
-                    if ($("#checkbox1").prop("checked") == true) {
-                        sum = sum + parseInt($("#quantity").val()) * 25000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 25000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 30000;
+                        document.f1.result.value = myAmount;
+                    }else if ($("#checkbox1").prop("checked") == true) {
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 25000;
+                        document.f1.result.value = myAmount;
                     } else {
-                        sum = sum + parseInt($("#quantity").val()) * 30000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 30000;
+                        document.f1.result.value = myAmount;
                     }
                 }
                 if ($("select").val() == "Nokia") {
                     if ($("#checkbox1").prop("checked") == true && $("#checkbox2").prop("checked") == true) {
-                        sum = sum + parseInt($("#quantity").val()) * 40000;
-                        sum = sum + parseInt($("#quantity").val()) * 50000;
-                    }
-                    if ($("#checkbox1").prop("checked") == true) {
-                        sum = sum + parseInt($("#quantity").val()) * 40000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 40000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 50000;
+                        document.f1.result.value = myAmount;
+                    }else if ($("#checkbox1").prop("checked") == true) {
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 40000;
+                        document.f1.result.value = myAmount;
                     } else {
-                        sum = sum + parseInt($("#quantity").val()) * 50000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 50000;
+                        document.f1.result.value = myAmount;
                     }
                 }
                 if ($("select").val() == "Samsung") {
                     if ($("#checkbox1").prop("checked") == true && $("#checkbox2").prop("checked") == true) {
-                        sum = sum + parseInt($("#quantity").val()) * 70000;
-                        sum = sum + parseInt($("#quantity").val()) * 80000;
-                    }
-                    if ($("#checkbox1").prop("checked") == true) {
-                        sum = sum + parseInt($("#quantity").val()) * 70000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 70000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 80000;
+                        document.f1.result.value = myAmount;
+                    }else if ($("#checkbox1").prop("checked") == true) {
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 70000;
+                        document.f1.result.value = myAmount;
                     } else {
-                        sum = sum + parseInt($("#quantity").val()) * 80000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 80000;
+                        document.f1.result.value = myAmount;
                     }
                 }
                 if ($("select").val() == "Motorola") {
                     if ($("#checkbox1").prop("checked") == true && $("#checkbox2").prop("checked") == true) {
-                        sum = sum + parseInt($("#quantity").val()) * 44000;
-                        sum = sum + parseInt($("#quantity").val()) * 47000;
-                    }
-                    if ($("#checkbox1").prop("checked") == true) {
-                        sum = sum + parseInt($("#quantity").val()) * 44000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 44000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 47000;
+                        document.f1.result.value = myAmount;
+                    }else if ($("#checkbox1").prop("checked") == true) {
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 44000;
+                        document.f1.result.value = myAmount;
                     } else {
-                        sum = sum + parseInt($("#quantity").val()) * 47000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 47000;
+                        document.f1.result.value = myAmount;
                     }
                 }
                 if ($("select").val() == "Apple") {
                     if ($("#checkbox1").prop("checked") == true && $("#checkbox2").prop("checked") == true) {
-                        sum = sum + parseInt($("#quantity").val()) * 120000;
-                        sum = sum + parseInt($("#quantity").val()) * 140000;
-                    }
-                    if ($("#checkbox1").prop("checked") == true) {
-                        sum = sum + parseInt($("#quantity").val()) * 120000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 120000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 140000;
+                        document.f1.result.value = myAmount;
+                    }else if ($("#checkbox1").prop("checked") == true) {
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 120000;
+                        document.f1.result.value = myAmount;
                     } else {
-                        sum = sum + parseInt($("#quantity").val()) * 140000;
+                        myAmount = myAmount + parseInt($("#quantity").val()) * 140000;
+                        document.f1.result.value = myAmount;
                     }
                 }
-                alert(sum);
             });
 
         });
