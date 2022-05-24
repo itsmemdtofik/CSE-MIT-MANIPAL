@@ -1,0 +1,6 @@
+birmingham 1.64
+bostan 337.4
+bufsalo 337.4
+chicago 555.3
+chicago 431.2
+atlanta 189.2
