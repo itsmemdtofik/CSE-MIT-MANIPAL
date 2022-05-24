@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student Bio Data Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <div class="row">
+                <h3>Student Biodata Form</h3>
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2" for="firstname">First Name</label>
+                <input type="text" class="form-control col-md-8" id="firstname" name="firstname"
+                    placeholder="First Name" />
+            </div>
+            <div class="form-group row">
+                <label class="col-md-2" for="firstname">Last Name</label>
+                <input type="text" class="form-control col-md-8" id="lastname" name="lastname"
+                    placeholder="last Name" />
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label class="radio-inline"><input type="radio" name="year">Year 1</label>
+                </div>
+                <div class="col-2">
+                    <label class="radio-inline"><input type="radio" name="year">Year 2</label>
+                </div>
+                <div class="col-2">
+                    <label class="radio-inline"><input type="radio" name="year">Year 3</label>
+                </div>
+                <div class="col-2">
+                    <label class="radio-inline"><input type="radio" name="year">Year 4</label>
+                </div>
+            </div>
+            <div class="checkbox row">
+                <div class="offset-md-2">
+                    <label><input type="checkbox">Receive more
+                        information</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-md-2"><button type="button" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <table class="table table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>Cutoff GPA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Microsoft</td>
+                            <td>9.00</td>
+                        </tr>
+                        <tr>
+                            <td>Amazon</td>
+                            <td>8.50</td>
+                        </tr>
+                        <tr>
+                            <td>Google</td>
+                            <td>9.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </form>
+</body>
