@@ -107,7 +107,6 @@
 			position: absolute;
 			right: 20px;
 			border-radius: 10px;
-
 		}
 	</style>
 	<script>
@@ -118,9 +117,6 @@
 				$("#greet").css("font-size", parseInt($("#text1").val()));
 				if ($("#None").is(":checked")) {
 					$("#divright").css("border-style", "None");
-				}
-				else if ($("#Double").is(":checked") && $("#Solid").is(":checked")) {
-					$("#divright").css("border-style", "Double Solid",);
 				}
 				else if ($("#Double").is(":checked")) {
 					$("#divright").css("border-style", "Double");
@@ -141,44 +137,44 @@
 </head>
 
 <body>
-		<div id="divright">
-			<p id="greet" align="center"></p>
-			<img width=0px height=0px style="margin-left: 50px">
-		</div>
-		<div style="position: absolute; left: 100px" class="main">
-			<h1>Birthday Card</h1>
-			<p1>Choose a bg color</p1>
-			<select id="bgcolor">
-				<option value="Yellow">Yellow</option>
-				<option value="Blue">Blue</option>
-			</select>
-			<br></br>
-			<p1>Choose a font</p1>
-			<select id="fonttype">
-				<option value="Verdana">Verdana</option>
-				<option value="Times New Roman">Times New Roman</option>
-			</select>
-			<br></br>
-			<p1>Choose a font size</p1>
-			<input type="text" id="text1">
-			<p>Choose a border Style</p>
-			<input type="radio" id="None" value="None" name="group1">
-			<label for="None">None</label><br>
-			<input type="radio" id="Double" value="Double" name="group1">
-			<label for="Double">Double</label><br>
-			<input type="radio" id="Solid" value="Solid" name="group1">
-			<label for="Solid">Solid</label>
-			<br>
-			<br>
-			<p1>Add default Picture</p1>
-			<input type="checkbox" id="checkbox1" value="cb1">
-			<br>
-			<br>
-			<p1>Enter greeting text below</p1><br><br>
-			<input type="textarea" id="txarea1"><br><br>
-			<button>Update</button>
-		</div>
-	
+	<div id="divright">
+		<p id="greet" align="center"></p>
+		<img width=0px height=0px style="margin-left: 50px">
+	</div>
+	<div style="position: absolute; left: 100px" class="main">
+		<h1>Birthday Card</h1>
+		<p1>Choose a bg color</p1>
+		<select id="bgcolor">
+			<option value="Yellow">Yellow</option>
+			<option value="Blue">Blue</option>
+		</select>
+		<br></br>
+		<p1>Choose a font</p1>
+		<select id="fonttype">
+			<option value="Verdana">Verdana</option>
+			<option value="Times New Roman">Times New Roman</option>
+		</select>
+		<br></br>
+		<p1>Choose a font size</p1>
+		<input type="text" id="text1">
+		<p>Choose a border Style</p>
+		<input type="radio" id="None" value="None" name="group1">
+		<label for="None">None</label><br>
+		<input type="radio" id="Double" value="Double" name="group1">
+		<label for="Double">Double</label><br>
+		<input type="radio" id="Solid" value="Solid" name="group1">
+		<label for="Solid">Solid</label>
+		<br>
+		<br>
+		<p1>Add default Picture</p1>
+		<input type="checkbox" id="checkbox1">
+		<br>
+		<br>
+		<p1>Enter greeting text below</p1><br><br>
+		<input type="textarea" id="txarea1"><br><br>
+		<button>Update</button>
+	</div>
+
 </body>
 
 </html>

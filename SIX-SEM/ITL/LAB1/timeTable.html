@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Table</title>
+    <style>
+        body{
+            background-color: whitesmoke;
+        }
+        table{
+            height: 400px;
+            width: auto;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+            top: 100px;
+            box-shadow: 0 0 10px black;
+        }
+        .sectionc {
+            background-color: whitesmoke;
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 20px;
+            text-shadow: 2px 2px red;
+            font-family: cascadia code;
+        }
+
+        .dayPeriod {
+            background-color: rgb(98, 221, 27);
+            border: none;
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        .dayP {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        .day {
+            background-color: rgb(2, 136, 245);
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        .break {
+            background-color: bisque;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 1px solid blue;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        .LunchBreak {
+            background-color: rgb(85, 9, 95);
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        .op {
+            background-color: rgb(250, 250, 67);
+            text-align: center;
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        .lab {
+            background-color: indigo;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+
+        .cl {
+            background-color: rgb(241, 225, 225);
+            color: black;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            font-size: 12px;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <table class="" align="center">
+        <tr>
+            <td colspan="12" align="center"  class="sectionc"> department of cse : Section C : SEM VI</td>
+        </tr>
+        <tr>
+            <td align="center"  class="dayPeriod">
+                <b>Day Period</b>
+            </td>
+            <td align="center"  class="dayP">
+                <b>8:00-9:00</b>
+            </td>
+            <td align="center"  class="dayP"><b>9:00-10:00</b>
+            </td>
+            <td align="center"  class="dayP">
+                <b>10:00-10:30</b>
+            </td>
+            <td align="center" class="dayP">
+                <b>10:30-11:30</b>
+            </td>
+            <td align="center" class="dayP">
+                <b>11:30-12:30</b>
+            </td>
+            <td align="center" class="dayP">
+                <b>12:30-1:00</b>
+            </td>
+            <td align="center" class="dayP">
+                <b>1:00-2:00</b>
+            </td>
+            <td align="center" class="dayP">
+                <b>2:00-3:00</b>
+            </td>
+            <td align="center" class="dayP">
+                <b>3:00-3:30</b>
+            </td>
+            <td align="center" class="dayP">
+                <b>3:30-4:30</b>
+            </td>
+            <td align="center" class="dayP">
+                <b>4:30-5:30</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" class="day">
+                <b>Monday</b>
+            </td>
+            <td align="center" class="cl"></td>
+            <td align="center" class="cl">IT</td>
+            <td align="center" class="break">BREAK</td>
+            <td align="center" class="cl">EEFM</td>
+            <td align="center" class="cl">OE-III</td>
+            <td colspan="2" align="center" class="LunchBreak">LUNCH BREAK</td>
+            <td colspan="3" align="center" class="lab">ITL(C2)(2-5)</td>
+            <td align="center" class="cl"></td>
+        </tr>
+        <tr>
+            <td align="center" class="day">
+                <b>Tuesday</b>
+            </td>
+            <td align="center" class="cl"></td>
+            <td colspan="3" align="center" class="lab">ITL(C1)(8:30-11:30)
+            </td>
+            <td align="center" colspan="2" class="LunchBreak">LUNCH BREAK</td>
+            <td align="center" class="cl">PE-2</td>
+            <td align="center" class="cl">DS</td>
+            <td align="center" class="break">BREAK</td>
+            <td align="center" class="cl">PE-1</td>
+            <td align="center" class="cl">PCAP</td>
+        </tr>
+        <tr>
+            <td align="center" class="day">
+                <b>Wednesday</b>
+            </td>
+            <td align="center" class="cl">EEFM</td>
+            <td align="center" class="cl">OE-III</td>
+            <td align="center" class="break">BREAK</td>
+            <td align="center" class="cl">PE-2</td>
+            <td align="center" class="cl">DS</td>
+            <td colspan="2" align="center" class="LunchBreak" class="lab">LUNCH BREAK</td>
+            <td colspan="3" align="center" class="lab">PCAPL(C2)(1:30-4:30)</td>
+            <td align="center" class="cl"></td>
+        </tr>
+        <tr>
+            <td align="center" class="day">
+                <b>Thursday</b>
+            </td>
+            <td align="center" class="cl"></td>
+            <td colspan="3" class="lab">DSL(C1)(8:30-11:30)</td>
+            <td align="center" colspan="2" class="LunchBreak" class="lab">LUNCH BREAK</td>
+            <td align="center" class="cl">PE-1</td>
+            <td align="center" class="cl">PCAP</td>
+            <td align="center" class="break">BREAK</td>
+            <td align="center" class="cl">EEFM</td>
+            <td align="center" class="cl">DS</td>
+
+        </tr>
+        <tr>
+            <td align="center" class="day">
+                <b>Friday</b>
+            </td>
+
+            <td align="center" class="cl"></td>
+            <td align="center" class="cl">PCAP</td>
+            <td align="center" class="break">BREAK</td>
+            <td align="center" class="cl">PE-1</td>
+            <td align="center" class="cl"></td>
+            <td align="center" colspan="2" class="LunchBreak">LUNCH BREAK</td>
+            <td align="center" colspan="3" class="lab">DSL(C2)(2-5)</td>
+            <td align="center" class="cl"></td>
+        </tr>
+        <tr>
+            <td align="center" class="day">
+                <b>Saturday</b>
+            </td>
+            <td align="center" class="cl"></td>
+            <td align="center" colspan="3" class="lab">PCAPL(C1)(8:30-11:30)</td>
+            <td align="center" colspan="2" class="LunchBreak">LUNCH BREAK</td>
+            <td align="center" class="op">EEFM(OP!)
+            </td>
+            <td align="center" class="cl">OE-III</td>
+            <td align="center" class="break">BREAK</td>
+            <td align="center" class="cl">PE-2</td>
+            <td align="center" class="cl">DS</td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2f363e;
+
+}
+
+#time{
+    display: flex;
+    gap: 40px;
+    color: #fff;
+}
+#time .circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#time dev{
+    position: absolute;
+    text-align: center;
+    font-weight: 500px;
+    font-size: 1.8em;
+}
+
+#time .op{
+    position: relative;
+    font: 1em;
+    transform: translate(-20px);
+    background-position: center;
+    background-repeat: repeat-y;
+}

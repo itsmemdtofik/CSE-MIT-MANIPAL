@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+    <title>A simple Calculator</title>
+    <style>
+        body {
+            background-color: white;
+
+        }
+
+        .text {
+            position: absolute;
+            left: 5px;
+            top: 15px;
+            margin-top: 2%;
+            transform: translate(-50%, -50%);
+            padding-left: 100%;
+        }
+
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+
+
+        }
+
+
+
+        ul li {
+            font-size: 30px;
+            letter-spacing: 5px;
+            text-shadow: 1px 10px 10px gray;
+            font-family: sans-serif;
+            font-weight: bolder;
+        }
+
+
+
+        ul li:nth-child(1) {
+            color: red;
+        }
+
+        ul li:nth-child(2) {
+            color: purple;
+            font-weight: bolder;
+        }
+
+        ul li:nth-child(3) {
+            color: orange;
+            font-weight: bolder;
+        }
+
+
+        ul li:nth-child(4) {
+            color: aliceblue;
+            font-weight: bolder;
+        }
+
+        ul li:nth-child(5) {
+            color: purple;
+            font-weight: bolder;
+        }
+
+        ul li:nth-child(6) {
+            color: black;
+            font-weight: bolder;
+        }
+
+        ul li:nth-child(7) {
+            color: white;
+            font-weight: bolder;
+        }
+
+        ul li:nth-child(8) {
+            color: lightcoral;
+            font-weight: bolder;
+        }
+
+        ul li:nth-child(9) {
+            color: red;
+            font-weight: bolder;
+        }
+
+        ul li:nth-child(10) {
+            color: black;
+            font-weight: bolder;
+        }
+
+
+        .cal-box {
+            width: 200px;
+            margin: 20px auto;
+
+        }
+
+        .container {
+            width: 400px;
+            height: 500px;
+            margin: 80px auto;
+            border-radius: 10px;
+            background: whitesmoke;
+            border: 1px solid black;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        #display {
+            position: relative;
+            left: -50px;
+            border: none;
+            outline: none;
+            color: black;
+            text-align: right;
+            font-weight: 600;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bolder;
+            margin: 30px 0 30px 0;
+            background: transparent;
+            box-shadow: inset 4px 4px 5px #babecc, inset -5px -5px 20px #ffffff;
+            border-radius: 10px/240px;
+            border: 1px solid indigo;
+            cursor: pointer;
+            border-radius: 5px;
+            border-style: dotted;
+        }
+
+        .button {
+            margin: 15px 0 0 5px;
+            width: 42px;
+            height: 42px;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            background: rgb(214, 214, 214);
+            box-shadow: 5px 5px 10px #b6acac, -5px -5px 10px #faf4f4;
+            display: inline-block;
+            border: 1px solid white;
+        }
+
+        .button:active {
+
+            box-shadow: inset 1px 1px 2px #babeec, inset -1px -1px 2px #ffffff;
+
+        }
+
+        .clearButton {
+
+            background-color: red;
+            color: white;
+
+        }
+
+        .addButton {
+
+            background-color: black;
+            color: white;
+
+        }
+
+        .subButton {
+            background-color: green;
+            color: ghostwhite;
+        }
+
+        .mulButton {
+            background-color: orange;
+            color: floralwhite;
+        }
+
+        .divButton {
+            background-color: indigo;
+            color: snow;
+        }
+
+        .equalButton {
+            background-color: rgb(75, 9, 69);
+            color: snow;
+        }
+        h1{
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+            top: 10px;
+            color: black;
+            text-shadow: 0 0 3px brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="cal-box">
+
+            <form action="" name="f1">
+                <h1>Calculator</h1>
+
+                <input id="display" type="text" name="display" placeholder="0">
+                <br>
+                <input class="button" type="button" value="7" onclick="f1.display.value+='7'">
+                <input class="button" type="button" value="8" onclick="f1.display.value+='8'">
+                <input class="button" type="button" value="9" onclick="f1.display.value+='9'">
+                <input class="button addButton" type="button" value="+" onclick="f1.display.value+='+'">
+                <br>
+
+                <input class="button" type="button" value="4" onclick="f1.display.value+='4'">
+                <input class="button" type="button" value="5" onclick="f1.display.value+='5'">
+                <input class="button" type="button" value="6" onclick="f1.display.value+='6'">
+                <input class="button subButton" type="button" value="-" onclick="f1.display.value+='-'">
+                <br>
+
+                <input class="button" type="button" value="1" onclick="f1.display.value+='1'">
+                <input class="button" type="button" value="2" onclick="f1.display.value+='2'">
+                <input class="button" type="button" value="3" onclick="f1.display.value+='3'">
+                <input class="button mulButton" type="button" value="x" onclick="f1.display.value+='*'">
+                <br>
+
+                <input class="button clearButton" type="button" value="C" onclick="f1.display.value=''">
+                <input class="button" type="button" value="0" onclick="f1.display.value+='0'">
+                <input class="button equalButton" type="button" value="="
+                    onclick="f1.display.value=eval(f1.display.value)">
+                <input class="button divButton" type="button" value="/" onclick="f1.display.value+='/'">
+                <br>
+
+
+            </form>
+        </div>
+</body>
+
+</html>

@@ -9,7 +9,7 @@
     <script src="jquery-3.6.0.min.js"></script>
     <style>
         body {
-            background-color: white;
+            background-color: antiquewhite;
         }
 
         .drop-down-main {
@@ -24,13 +24,214 @@
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
         }
 
+        @media only screen and (max-width: 600px) {
+            .drop-down-main {
+                
+                background-color: whitesmoke;
+                position: absolute;
+                top: 40px;
+                left: 350px;
+                border: 1px solid rgb(0, 0, 0);
+                border-radius: 5px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+            }
+
+            .drop-down-main h1 {
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 30px;
+                text-align: center;
+                text-transform: uppercase;
+                text-shadow: 0 0 3px brown;
+            }
+
+            .drop-down-main select {
+                width: 100px;
+                height: 30px;
+                text-align: center;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 15px;
+                outline-color: rgb(165, 42, 155);
+                position: relative;
+                left: 10px;
+                cursor: pointer;
+                background-color: rgb(165, 42, 155);
+                color: white;
+                border: 1px solid black;
+                border-radius: 5px;
+
+            }
+
+            .drop-down-checkbox {
+                width: 320px;
+                height: 30px;
+                position: relative;
+                top: 30px;
+                left: 150px;
+                display: inline-block;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 15px;
+
+            }
+
+            .drop-down-checkbox input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+            }
+
+            .drop-down-checkbox h3 {
+                font-size: 20px;
+                position: relative;
+                top: -45px;
+                left: 30px;
+            }
+
+            .drop-down-checkbox-two {
+                width: 150px;
+                height: 30px;
+                position: relative;
+                top: -25px;
+                left: 150px;
+            }
+
+            .drop-down-checkbox-two input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+
+            }
+
+            .drop-down-checkbox-two h4 {
+                font-size: 20px;
+                position: relative;
+                top: -50px;
+                left: 30px;
+            }
+
+            input[type="text"] {
+                width: 300px;
+                height: 30px;
+                text-align: center;
+                color: black;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 20px;
+                text-transform: uppercase;
+                position: relative;
+                top: -100px;
+                left: 150px;
+                border: none;
+                outline: none;
+            }
+
+            input[type="text"]:hover {
+                box-shadow: 0 0 3px black;
+                border: 1px solid blue;
+                border-radius: 5px;
+                transition: 0.5s;
+            }
+
+            h5 {
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 20px;
+                text-transform: uppercase;
+                position: relative;
+                top: -40px;
+                left: 10px;
+            }
+
+            input[type="button"] {
+                width: 300px;
+                height: 40px;
+                text-align: center;
+                color: white;
+                background-color: blue;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 15px;
+                text-transform: uppercase;
+                position: relative;
+                top: -30px;
+                left: 150px;
+                border: 1px solid white;
+                box-shadow: 0 0 3px rgb(0, 0, 0);
+                outline: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            input[type="button"]:active {
+                transition: 0.5;
+                background-color: green;
+                color: white;
+                transform: scale(1);
+            }
+
+            input[type="reset"] {
+                width: 100px;
+                height: 40px;
+                text-align: center;
+                color: white;
+                background-color: black;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 15px;
+                text-transform: uppercase;
+                position: relative;
+                top: -30px;
+                left: 150px;
+                border: 1px solid white;
+                box-shadow: 0 0 3px rgb(0, 0, 0);
+                outline: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            input[type="reset"]:active {
+                transition: 0.5;
+                transform: scale(.9);
+                background-color: red;
+            }
+
+            #result {
+                width: 300px;
+                height: 30px;
+                text-align: center;
+                color: black;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 20px;
+                text-transform: uppercase;
+                position: relative;
+                top: -50px;
+                left: 150px;
+                outline: none;
+                border: none;
+
+            }
+
+            h2 {
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: bold;
+                font-size: 20px;
+                text-transform: uppercase;
+                position: relative;
+                left: 10px;
+                top: -5px;
+            }
+
+        }
+
         .drop-down-main h1 {
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
-            font-size: 30px;
+            font-size: 20px;
             text-align: center;
             text-transform: uppercase;
-            text-shadow: 0 0 3px brown;
+            text-shadow: 0 0 3px black;
+            letter-spacing: 3px;
         }
 
         .drop-down-main select {
@@ -48,7 +249,7 @@
             color: white;
             border: 1px solid black;
             border-radius: 5px;
-            
+
         }
 
         .drop-down-checkbox {
@@ -104,21 +305,19 @@
             color: black;
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 12px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             position: relative;
             top: -100px;
             left: 150px;
-            border: none;
-            outline:none;
-        }
-         input[type="text"]:hover{
             box-shadow: 0 0 3px black;
             border: 1px solid blue;
             border-radius: 5px;
-            transition: 0.5s;
-         }
-        h5{
+            outline: none;
+        }
+
+        h5 {
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
             font-size: 20px;
@@ -127,15 +326,17 @@
             top: -40px;
             left: 10px;
         }
-       input[type="button"]{
+
+        input[type="button"] {
             width: 300px;
             height: 40px;
             text-align: center;
-            color: white;
+            color: black;
             background-color: blue;
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
-            font-size: 15px;
+            font-size: 12px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             position: relative;
             top: -30px;
@@ -153,7 +354,8 @@
             color: white;
             transform: scale(1);
         }
-        input[type="reset"]{
+
+        input[type="reset"] {
             width: 100px;
             height: 40px;
             text-align: center;
@@ -161,7 +363,8 @@
             background-color: black;
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
-            font-size: 15px;
+            font-size: 12px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             position: relative;
             top: -30px;
@@ -171,28 +374,34 @@
             outline: none;
             cursor: pointer;
             border-radius: 5px;
-        }input[type="reset"]:active {
+        }
+
+        input[type="reset"]:active {
             transition: 0.5;
             transform: scale(.9);
             background-color: red;
         }
-        #result{
+
+        #result {
             width: 300px;
             height: 30px;
             text-align: center;
             color: black;
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 12px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             position: relative;
             top: -50px;
             left: 150px;
             outline: none;
             border: none;
-            
+            border-radius: 5px;
+
         }
-        h2{
+
+        h2 {
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
             font-size: 20px;
@@ -205,7 +414,7 @@
 </head>
 
 <body>
-    <form name = "f1">
+    <form name="f1">
         <div class="drop-down-main">
             <h1>shopping</h1>
             <select name="dropdown">
@@ -225,7 +434,7 @@
                 <h4>Laptop</h4><br>
             </div>
             <h2>TOTAL(RS): </h2><input type="text1" name="result" id="result" autocomplete="off" readonly><br>
-            <h5>Quantity : </h5><input type="text" name="quantity" id="quantity" autocomplete="off" required>
+            <h5>Quantity : </h5><input type="text" name="quantity" id="quantity" autocomplete="off" required placeholder="Quantity">
             <input type="button" value="Produce Bill" id="button">
             <input type="reset" value="Reset" name="reset">
 
@@ -236,13 +445,13 @@
         $(document).ready(function () {
             $("#button").click(function () {
                 var myAmount = 0;
-               
+
                 if ($("select").val() == "HP") {
                     if ($("#checkbox1").prop("checked") == true && $("#checkbox2").prop("checked") == true) {
                         myAmount = myAmount + parseInt($("#quantity").val()) * 25000;
                         myAmount = myAmount + parseInt($("#quantity").val()) * 30000;
                         document.f1.result.value = myAmount;
-                    }else if ($("#checkbox1").prop("checked") == true) {
+                    } else if ($("#checkbox1").prop("checked") == true) {
                         myAmount = myAmount + parseInt($("#quantity").val()) * 25000;
                         document.f1.result.value = myAmount;
                     } else {
@@ -255,7 +464,7 @@
                         myAmount = myAmount + parseInt($("#quantity").val()) * 40000;
                         myAmount = myAmount + parseInt($("#quantity").val()) * 50000;
                         document.f1.result.value = myAmount;
-                    }else if ($("#checkbox1").prop("checked") == true) {
+                    } else if ($("#checkbox1").prop("checked") == true) {
                         myAmount = myAmount + parseInt($("#quantity").val()) * 40000;
                         document.f1.result.value = myAmount;
                     } else {
@@ -268,7 +477,7 @@
                         myAmount = myAmount + parseInt($("#quantity").val()) * 70000;
                         myAmount = myAmount + parseInt($("#quantity").val()) * 80000;
                         document.f1.result.value = myAmount;
-                    }else if ($("#checkbox1").prop("checked") == true) {
+                    } else if ($("#checkbox1").prop("checked") == true) {
                         myAmount = myAmount + parseInt($("#quantity").val()) * 70000;
                         document.f1.result.value = myAmount;
                     } else {
@@ -281,7 +490,7 @@
                         myAmount = myAmount + parseInt($("#quantity").val()) * 44000;
                         myAmount = myAmount + parseInt($("#quantity").val()) * 47000;
                         document.f1.result.value = myAmount;
-                    }else if ($("#checkbox1").prop("checked") == true) {
+                    } else if ($("#checkbox1").prop("checked") == true) {
                         myAmount = myAmount + parseInt($("#quantity").val()) * 44000;
                         document.f1.result.value = myAmount;
                     } else {
@@ -294,7 +503,7 @@
                         myAmount = myAmount + parseInt($("#quantity").val()) * 120000;
                         myAmount = myAmount + parseInt($("#quantity").val()) * 140000;
                         document.f1.result.value = myAmount;
-                    }else if ($("#checkbox1").prop("checked") == true) {
+                    } else if ($("#checkbox1").prop("checked") == true) {
                         myAmount = myAmount + parseInt($("#quantity").val()) * 120000;
                         document.f1.result.value = myAmount;
                     } else {
