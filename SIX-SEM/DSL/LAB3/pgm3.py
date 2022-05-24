@@ -1,0 +1,33 @@
+import numpy as np
+# a)
+a = np.array([1, 2, 3, 4, 5, 6])
+print(a)
+# b)
+a = np.array((1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+print(a)
+# c)
+c = np.zeros((3, 4))
+print(c)
+# d)
+d = np.arange(0, 20, 5)
+print(d)
+# e)
+e = c.reshape(2, 2, 3)
+print(e)
+# f)
+c = a.reshape(5, 2)
+print(c)
+print('Col min:', end=' ')
+for i in range(c.shape[0]):
+    print(min(c[i, :]), end=' ')
+print('\nRow min:', end=' ')
+for i in range(c.shape[1]):
+    print(min(c[:, i]), end=' ')
+print('Col max:', end=' ')
+for i in range(c.shape[0]):
+    print(max(c[i, :]), end=' ')
+print('\nRow max:', end=' ')
+for i in range(c.shape[1]):
+    print(max(c[:, i]), end=' ')
+print('\nColumn sum: ', c.sum(axis=0))
+print('Row sum: ', c.sum(axis=1))
